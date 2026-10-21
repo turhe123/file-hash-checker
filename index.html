@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SEO:START — the builder rewrites title / description / keywords for search (see CLAUDE.md) -->
+  <title>File Hash Checker – SHA-256 & MD5 Checksum, Free and Private</title>
+  <meta name="description" content="Verify a file checksum in your browser: MD5, SHA-1, SHA-256, SHA-384 and SHA-512 for files or text, compared with a known hash. Nothing is uploaded.">
+  <meta name="keywords" content="file hash checker, sha256 checksum, md5 hash generator, verify file checksum online, sha256 online, sha512 generator, compare file hash, sha1 checksum">
+  <!-- SEO:END -->
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f14" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://turhe123.github.io/file-hash-checker/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="File Hash and Checksum Calculator – Free, Private, In Your Browser">
+  <meta property="og:description" content="Compute MD5, SHA-1, SHA-256 and SHA-512 for text or files in your browser and compare with a known hash. Free and open source, nothing is uploaded, works offlin">
+  <meta property="og:url" content="https://turhe123.github.io/file-hash-checker/">
+  <meta property="og:image" content="https://turhe123.github.io/file-hash-checker/docs/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="File Hash and Checksum Calculator">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="File Hash and Checksum Calculator – Free, Private, In Your Browser">
+  <meta name="twitter:description" content="Compute MD5, SHA-1, SHA-256 and SHA-512 for text or files in your browser and compare with a known hash. Free and open source, nothing is uploaded, works offlin">
+  <meta name="twitter:image" content="https://turhe123.github.io/file-hash-checker/docs/og.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "File Hash and Checksum Calculator",
+    "alternateName": "File Hash and Checksum Calculator – Free, Private, In Your Browser",
+    "description": "Compute MD5, SHA-1, SHA-256 and SHA-512 for text or files in your browser and compare with a known hash. Free and open source, nothing is uploaded, works offlin",
+    "url": "https://turhe123.github.io/file-hash-checker/",
+    "image": "https://turhe123.github.io/file-hash-checker/docs/og.png",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript. Works offline after the first visit.",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "license": "https://opensource.org/licenses/MIT",
+    "softwareVersion": "1.0.0",
+    "author": { "@type": "Person", "name": "Or Davidai Bachar", "url": "https://github.com/turhe123" },
+    "sameAs": ["https://github.com/turhe123/file-hash-checker"]
+  }
+  </script>
+  
+  <!-- Page views are counted with GoatCounter: no cookies, no personal data, open source. -->
+  <script data-goatcounter="https://turhe123.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#tool">Skip to the tool</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./" aria-label="File Hash and Checksum Calculator home">
+        <img class="brand__icon" src="icon.svg" alt="" width="28" height="28">
+        <span class="brand__name">File Hash and Checksum Calculator</span>
+      </a>
+      <nav class="site-nav" aria-label="Page">
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/turhe123/file-hash-checker" rel="noopener">GitHub</a>
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener" class="site-nav__more">More tools</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <!-- HERO:START — the builder may refine the headline and promise; keep the trust badges -->
+      <h1 class="hero__title">File Hash and Checksum Calculator</h1>
+      <p class="hero__lead">Compute MD5, SHA-1, SHA-256 and SHA-512 for text or files in your browser and compare with a known hash.</p>
+      <!-- HERO:END -->
+      <ul class="badges" aria-label="Why this tool is safe to use">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Runs in your browser, files never leave your device</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Free, open source, no account, no ads</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works offline after the first visit</li>
+      </ul>
+    </section>
+
+    <section class="container" id="tool" aria-labelledby="tool-title">
+      <div class="tool-card">
+        <!-- TOOL:START — the builder replaces everything between these markers with the real tool UI -->
+        <h2 id="tool-title" class="visually-hidden">Hash a file or text</h2>
+        <div class="tabs" role="tablist" aria-label="What to hash">
+          <button class="tab" type="button" role="tab" id="tab-file" aria-controls="panel-file" aria-selected="true">Files</button>
+          <button class="tab" type="button" role="tab" id="tab-text" aria-controls="panel-text" aria-selected="false" tabindex="-1">Text</button>
+        </div>
+
+        <div class="tab-panel" id="panel-file" role="tabpanel" aria-labelledby="tab-file">
+          <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose files to hash or drop them here">
+            <label class="visually-hidden" for="file-input">Choose files to hash</label>
+            <input class="dropzone__input" id="file-input" type="file" multiple aria-describedby="dropzone-hint">
+            <svg class="dropzone__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="dropzone__title">Drop files here or <span class="link">choose files</span></p>
+            <p class="dropzone__hint" id="dropzone-hint">Any file of any size: an installer, ISO image, archive or document. Several at once is fine. Nothing is uploaded.</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-text" role="tabpanel" aria-labelledby="tab-text" hidden>
+          <div class="field">
+            <label for="text-input">Text to hash (UTF-8)</label>
+            <textarea id="text-input" class="mono" rows="4" spellcheck="false" autocomplete="off" placeholder="Type or paste text, for example abc"></textarea>
+          </div>
+          <div class="row row--between text-actions">
+            <label class="check"><input type="checkbox" id="text-newline"> Include a trailing newline (like <code>echo</code>)</label>
+            <button class="btn btn--primary" type="button" id="hash-text">Hash text</button>
+          </div>
+        </div>
+
+        <div class="hash-progress" id="progress-wrap" hidden>
+          <div class="row row--between hash-progress__meta">
+            <span id="progress-label" class="hash-progress__label">Hashing…</span>
+            <span class="row hash-progress__right"><span id="progress-pct" class="stat">0%</span><button class="btn btn--small btn--ghost" type="button" id="cancel">Cancel</button></span>
+          </div>
+          <div class="progress" id="progress" role="progressbar" aria-label="Hashing progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+        </div>
+
+        <div class="hash-options" id="options">
+          <fieldset class="field hash-algos">
+            <legend class="field__label">Algorithms</legend>
+            <div class="row">
+              <label class="check"><input type="checkbox" name="algo" value="md5" checked> MD5</label>
+              <label class="check"><input type="checkbox" name="algo" value="sha1" checked> SHA-1</label>
+              <label class="check"><input type="checkbox" name="algo" value="sha256" checked> SHA-256</label>
+              <label class="check"><input type="checkbox" name="algo" value="sha384" checked> SHA-384</label>
+              <label class="check"><input type="checkbox" name="algo" value="sha512" checked> SHA-512</label>
+            </div>
+          </fieldset>
+          <div class="row hash-format">
+            <div class="field">
+              <label for="format">Output</label>
+              <select id="format">
+                <option value="hex" selected>Hex</option>
+                <option value="base64">Base64</option>
+              </select>
+            </div>
+            <label class="check hash-upper"><input type="checkbox" id="uppercase"> Uppercase</label>
+          </div>
+        </div>
+
+        <div class="results" id="results" aria-live="polite"></div>
+
+        <div class="field compare">
+          <label for="expected">Expected hash</label>
+          <div class="compare__row">
+            <input type="text" id="expected" class="mono" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Paste the published hash (Ctrl+V or ⌘V)" aria-describedby="compare-detail">
+            <span class="chip compare__chip" id="compare-status" data-state="waiting" role="status">Waiting</span>
+          </div>
+          <p class="field__hint" id="compare-detail">Paste a hash or a whole checksum line. Case, spaces, colons and a trailing file name are ignored.</p>
+        </div>
+
+        <div class="row hash-downloads" id="downloads" hidden>
+          <div class="field hash-list-algo">
+            <label for="list-algo">Checksum list uses</label>
+            <select id="list-algo"></select>
+          </div>
+          <button class="btn btn--primary" type="button" id="download-list">Download checksums.txt</button>
+          <button class="btn" type="button" id="download-csv">Download hashes.csv</button>
+        </div>
+
+        <p class="hash-note"><strong>Which one to use?</strong> Compare with whatever the publisher lists, usually SHA-256. MD5 and SHA-1 are broken for security (someone can craft two files with the same hash), but they are still fine for spotting accidental corruption from a bad download or copy.</p>
+        <!-- TOOL:END -->
+      </div>
+    </section>
+
+    <section class="container section" id="how" aria-labelledby="how-title">
+      <h2 id="how-title" class="section__title">How it works</h2>
+      <!-- HOW:START — three honest steps for this tool -->
+      <ol class="steps">
+        <li><strong>Drop a file or type text.</strong> Pick one or many files, or switch to the Text tab. The file is read on your device in small slices, so even a multi-gigabyte image works.</li>
+        <li><strong>Read the hashes.</strong> MD5, SHA-1, SHA-256, SHA-384 and SHA-512 appear together, each with a copy button, in hex or Base64.</li>
+        <li><strong>Paste the published hash.</strong> The Compare field checks it against every result and tells you which algorithm matched. Save all results as checksums.txt or a CSV.</li>
+      </ol>
+      <!-- HOW:END -->
+    </section>
+
+    <section class="container section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="section__title">Questions, answered</h2>
+      <!-- FAQ:START — 4 to 6 questions; keep the privacy, offline and AI answers -->
+      <details class="faq" open>
+        <summary>Are my files uploaded anywhere?</summary>
+        <p>No. File Hash and Checksum Calculator runs entirely in your browser. Your files are read in slices on your device, hashed with JavaScript in a background worker, and never sent to a server. That matters most when you are checking a download you do not trust yet. You can disconnect from the internet and it keeps working.</p>
+      </details>
+      <details class="faq">
+        <summary>Why does my text hash not match the one from the command line?</summary>
+        <p>Almost always a newline. <code>echo abc | sha256sum</code> hashes "abc" plus a line break, which gives a different result from "abc" alone. Tick "Include a trailing newline" on the Text tab to match <code>echo</code>, or use <code>printf</code> on the command line. Text is hashed as UTF-8 bytes.</p>
+      </details>
+      <details class="faq">
+        <summary>Are MD5 and SHA-1 still safe to use?</summary>
+        <p>Not for security. Both are broken: an attacker can build two different files with the same MD5 or SHA-1. If a publisher lists SHA-256 or SHA-512, compare against that. MD5 and SHA-1 are still fine for catching accidental corruption, such as a truncated download or a bad copy to a USB stick.</p>
+      </details>
+      <details class="faq">
+        <summary>Is it really free?</summary>
+        <p>Yes. It is open source under the MIT license, with no account, no file size limit and no ads. If it saves you a paid subscription, you can say thanks on Ko-fi.</p>
+      </details>
+      <details class="faq">
+        <summary>Does it work offline?</summary>
+        <p>Yes. After your first visit the page is cached by a service worker, so it loads without a connection. You can also install it from your browser's menu as an app. Very large files on phones can run into memory limits, so a computer is the better choice for multi-gigabyte images.</p>
+      </details>
+      <details class="faq">
+        <summary>Was this written by AI?</summary>
+        <p>Yes. File Hash and Checksum Calculator was generated by Claude Code from a written specification inside an automated pipeline, with a test suite that runs in a real browser. The hash code checks itself against the standard "abc" test vectors and your browser's built-in WebCrypto every time it starts. The full source is on GitHub, so you can read every line before you trust it with your files.</p>
+      </details>
+      <!-- FAQ:END -->
+    </section>
+
+    <section class="container section" id="support">
+      <div class="support-card">
+        <h2 class="section__title">Built by one person, given away for free</h2>
+        <p>File Hash and Checksum Calculator is a free alternative to paid tools like Online MD5 and SHA hash generators and file checksum sites. If it earns a place in your bookmarks, a coffee keeps the updates coming.</p>
+        <a class="btn btn--kofi" href="https://ko-fi.com/leodavidai" rel="noopener">☕ Support Or on Ko-fi</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__links">
+        <a href="https://github.com/turhe123/file-hash-checker" rel="noopener">Source on GitHub</a> ·
+        <a href="https://github.com/turhe123/file-hash-checker/issues" rel="noopener">Report a bug</a> ·
+        <a href="https://turhe123.github.io/web-tools/" rel="noopener">More free web tools</a> ·
+        <a href="https://ko-fi.com/leodavidai" rel="noopener">Ko-fi</a>
+      </p>
+      <p class="site-footer__disclosure"><strong>Built with AI.</strong> File Hash and Checksum Calculator was written by Claude Code inside an automated pipeline from a plain-English spec, as a clean-room implementation: no code or assets from any commercial product. It runs entirely in your browser, makes no network requests except an anonymous, cookieless page-view count, and has had less human review than hand-written software. Bug reports and pull requests are welcome.</p>
+      <p class="site-footer__copy">© 2026 Or Davidai Bachar · MIT License · <span id="sw-status" class="sw-status" aria-live="polite"></span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="site.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
